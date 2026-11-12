@@ -53,4 +53,4 @@ write_string("Hello World!", 10, 20, (0, 0, 0), (255, 255, 255), 1)
 
 ## 🛠️ Details
 
-The project has been created the August 27 of 2024.
+The project has been created the November 20 of 2023.
