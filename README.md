@@ -48,3 +48,9 @@ write_string("Hello World!", 10, 20, (0, 0, 0), (255, 255, 255), 1)
 
 - Designed and optimized for the **NumWorks** calculator (**MicroPython**).
 - Works with the standard `kandinsky` module (`fill_rect`).
+
+---
+
+## 🛠️ Details
+
+The project has been created the August 27 of 2024.
