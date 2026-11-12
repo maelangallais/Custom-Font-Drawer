@@ -169,9 +169,6 @@ def decode_char(char):
   char=decode_hex(char)
   char=decode_bin(char)
   return char
-def decode(char):
- rows=char.split(';')
- return[[int(c)for c in row]for row in rows]
 def draw(ltr,xf,yf,cc=black,cb=0,tl=1):
  if cb!=0:fr(xf,yf,7*tl,14*tl,cb)
  acc=0
