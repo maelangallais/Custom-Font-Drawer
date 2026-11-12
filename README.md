@@ -1,35 +1,50 @@
-# 🖌️ Char_Drawer
-Just a fonction to draw 115 symbols on a screen !
-#
+# 🖌️ Custom-Font-Drawer
 
-## ℹ️ Informations
-The only thing you need to know is how to use the commands and there is just a simple fonction named write_string().
+A custom lightweight character and typography rendering engine for NumWorks (MicroPython) supporting 115+ symbols, accents, variable sizing, and hex-compressed glyph data.
 
-So you have only 6 very easy parameters :
-- Obviously, you start with the text you want to write on your screen.
-- Next you provide the coordinates the X and Y values which will position the text on the screen.
-- After that, you can define the color of the character you are going to write with the background's color of your choice.
-- Finally, if you want to, you can adjust the size by multiplying it by a number.
+---
 
-That is all you have to know about this very simple program !
+## ℹ️ Versions & Scripts
 
-And, just in case, you can draw all these symbols : 
-- The entire alphabet, in lowercase and uppercase
-- The 10 numbers > 0123456789
-- These 37 specials caracters > '",:.!?()%_+-*/=[]{}<>;π√~^∞→|°±@#&$\
-- These 16 more popular accented letters > àâäéèêëîïôöùûüÿç
-- And...the space. Of course !
-But if the character is unknown in my database it will draw a ▯.
-##
+This repository contains both iterations of the custom font engine:
 
-## 🖥️ Requirements
-This program is coded in micropython just for Numwoks calculator but it must works on a computer if you change the module to adapt with Pyhton.
-##
+- **`lowercase_v2.py`** *(Recommended)* : Glyphs are stored with hexadecimal compression, drastically reducing RAM and flash footprint on the calculator while providing full rendering capabilities.
+- **`lowercase_v1.py`** : The initial version storing raw binary patterns.
 
-## 💬 Language
-It was coded on a Numworks calculator in Micropython.
-##
+---
 
-## 🛠️ Details
-The project has been created the November 20 of 2023.
-##
+## 🚀 Usage
+
+Import `write_string` and call it with your coordinates and parameters:
+
+```python
+from lowercase_v2 import write_string
+
+# write_string(text, x, y, text_color, background_color, scale)
+write_string("Hello World!", 10, 20, (0, 0, 0), (255, 255, 255), 1)
+```
+
+### Parameters
+1. **text** : Text string to display on screen.
+2. **x, y** : Pixel coordinates.
+3. **color** *(optional)* : RGB text color (defaults to black).
+4. **background** *(optional)* : RGB background color (`0` for transparent).
+5. **scale** *(optional)* : Integer scaling multiplier (default: `1`).
+
+---
+
+## 🔤 Supported Characters (115+ symbols)
+
+- Full Latin alphabet (lowercase & uppercase): `a-z`, `A-Z`
+- Numbers: `0-9`
+- 37 Special characters: `' " , : . ! ? ( ) % _ + - * / = [ ] { } < > ; π √ ~ ^ ∞ → | ° ± @ # & $ \`
+- 16 French accented letters: `à â ä é è ê ë î ï ô ö ù û ü ÿ ç`
+- Space
+- Unknown characters fallback gracefully to a generic placeholder block (`▯`).
+
+---
+
+## 🖥️ Requirements & Environment
+
+- Designed and optimized for the **NumWorks** calculator (**MicroPython**).
+- Works with the standard `kandinsky` module (`fill_rect`).
