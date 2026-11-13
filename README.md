@@ -11,6 +11,13 @@ This repository contains both iterations of the custom font engine:
 - **`lowercase_v2.py`** *(Recommended)* : Glyphs are stored with hexadecimal compression, drastically reducing RAM and flash footprint on the calculator while providing full rendering capabilities.
 - **`lowercase_v1.py`** : The initial version storing raw binary patterns.
 
+### 🔧 Glyph Converters (`converters/`)
+
+The helper scripts used to build and compress the font glyph database from 2D integer matrices:
+
+- **`converters/get_letters.py`** *(Created May 29, 2024)* : Converts a 2D binary integer array (`0`/`1` pixel matrix) into a semicolon-separated binary string (`v1` format).
+- **`converters/bin_to_hex.py`** *(Created June 12, 2024)* : Encodes semicolon-separated binary glyph strings into the compact width-prefixed hexadecimal format used by `lowercase_v2.py`.
+
 ---
 
 ## 🚀 Usage
