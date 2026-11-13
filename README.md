@@ -8,8 +8,8 @@ A custom lightweight character and typography rendering engine for NumWorks (Mic
 
 This repository contains both iterations of the custom font engine:
 
-- **`lowercase_v2.py`** *(Recommended)* : Glyphs are stored with hexadecimal compression, drastically reducing RAM and flash footprint on the calculator while providing full rendering capabilities.
-- **`lowercase_v1.py`** : The initial version storing raw binary patterns.
+- **`lowercase_v2.py`** *(Created June 13, 2024 — Recommended)* : Glyphs are stored with hexadecimal compression, drastically reducing RAM and flash footprint on the calculator while providing full rendering capabilities.
+- **`lowercase_v1.py`** *(Created November 20, 2023)* : The initial version storing raw binary patterns.
 
 ### 🔧 Glyph Converters (`converters/`)
 
@@ -55,9 +55,3 @@ write_string("Hello World!", 10, 20, (0, 0, 0), (255, 255, 255), 1)
 
 - Designed and optimized for the **NumWorks** calculator (**MicroPython**).
 - Works with the standard `kandinsky` module (`fill_rect`).
-
----
-
-## 🛠️ Details
-
-The project has been created the November 20 of 2023.
