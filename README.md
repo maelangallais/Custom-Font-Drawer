@@ -55,3 +55,10 @@ write_string("Hello World!", 10, 20, (0, 0, 0), (255, 255, 255), 1)
 
 - Designed and optimized for the **NumWorks** calculator (**MicroPython**).
 - Works with the standard `kandinsky` module (`fill_rect`).
+
+---
+
+## ⚙️ Technical Details
+
+- **Glyph Dimensions**: Each character cell has a bounding box of **7 × 14 pixels** (7px wide by 14px tall). Most glyphs do not occupy the full 14px height; individual vertical baseline offsets are defined in the `alt` dictionary inside the script.
+- **Character Spacing** *(Untested)*: By default, glyphs are packed at 7px horizontal intervals. If you want a 1-pixel gap between every character, replace `7` with `8` on **line 199** of `lowercase_v2.py` (`draw(ch,xf+rvp*7*tl,yf,cc,cb,tl)`).
